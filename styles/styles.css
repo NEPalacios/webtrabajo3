@@ -1,0 +1,274 @@
+/* IMPORTADO
+@font-face {
+  font-family: 'Rubik';
+  src: url(../fonts/RubikDoodleShadow-Regular.ttf);
+} */
+
+/* A TODO */
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+/* BARRA DE NAVEGACION, NAVBAR */
+/* .navbarPrincipal {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(117, 164, 251, 0.503);
+  font-size: 1vw; 
+} */
+
+/* Alinea el contenido de la barra de navegación al centro */
+/* .navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 1vw; 
+} */
+
+/* Estilo para el enlace 'Nosotros' con el separador */
+/* .navbar-nav .nav-item:last-child {
+  margin-right: 0;
+  border-left: 1px solid #fff;
+  padding-left: 1vw;  */
+}
+
+/* BODY */
+.article,
+.div-contacto {
+  font-size: small;
+  font-style: initial;
+  text-align: center;
+}
+
+.titulo {
+  font-family: 'Rubik';
+  font-size: 4vw; 
+  text-align: center;
+  align-items: center;
+}
+
+/* .sectionPrincipal {
+  text-align: center;
+  padding-block: 1vw; 
+} */
+
+/* GRILLA DE IMÁGENES
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40%, 1fr)); 
+  gap: 2vw; 
+}
+
+.grid-container img {
+  width: 100%;
+  height: auto;
+}
+
+/* .grid-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1vw; 
+} */
+
+/* .description {
+  position: absolute;
+  bottom: 0;
+  left: 20vw; 
+  width: 60%;
+  background-color: rgb(117, 164, 251);
+  color: #fff;
+  padding: 0.8vw; 
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+} */ */
+
+/* ANIMACIÓN
+.grid-container {
+  display: grid;
+  place-items: center;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
+
+.grid-item:hover .description {
+  opacity: 1;
+} */
+
+/* CARRUSEL */
+#carouselExampleAutoplaying {
+  display: flex;
+  width: 1000px; 
+  margin: 0 auto;
+}
+
+#carouselExampleAutoplaying .carousel-inner img {
+  display: flex;
+  max-width: 1000px;
+  height: auto;
+}
+
+/* FOOTER
+footer {
+  font-size: 1.1vw; 
+  text-align: center;
+  background-color: rgba(117, 164, 251, 0.503);
+  text-decoration: solid;
+} */
+
+/* NORTE */
+.section-sur,
+.div-section,
+.section-este,
+.section-oeste {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3vw; 
+  padding-bottom: 0;
+  gap: 2vw; 
+  grid-template-columns: repeat(auto-fit, minmax(40%, 1fr)); 
+  font-size: 1.1vw; 
+}
+
+.iframe-sur {
+  width: 100%; 
+  height: 30vw; 
+  align-items: center;
+}
+
+.section-img-atractivos {
+  width: 50%; 
+  height: auto;
+  margin-left: 35%; 
+  margin-bottom: 5vw; 
+}
+
+.article-atractivos,
+.p-sur,
+.p-este,
+.p-oeste {
+  font-size: 1.1vw; 
+  text-align: center;
+}
+
+.aside-atractivos {
+  background-color: #F1BFC2;
+}
+
+.section-conclusion {
+  background-color: rgba(128, 128, 128, 0.278);
+  text-align: center;
+}
+
+/* SUR! */
+table {
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+th,
+td {
+  padding: 0.5vw; 
+}
+
+.article-imagen,
+.img-oeste {
+  width: 40%; 
+  margin: 5vw 3vw 3vw; 
+  border: 3vw 3vw 3vw;
+  display: grid;
+}
+
+
+
+/* MEDIA QUERIES PARA DISPOSITIVOS MÓVILES */
+@media (min-width: 300px) and (max-width: 800px) {
+  .navbarPrincipal {
+    font-size: 4vw; 
+  }
+
+  .navbar-nav .nav-item {
+    margin-right: 0.5vw; 
+  }
+
+  .titulo {
+    font-size: 10vw; 
+  }
+
+  .section {
+    padding-block: 0.5vw; 
+  }
+
+  .grid-container {
+    gap: 1vw; 
+  }
+
+  .grid-item .description {
+    left: 5vw; 
+    width: 90%; 
+  }
+
+  #carouselExampleAutoplaying {
+    width: 100%; 
+  }
+
+  footer {
+
+    bottom: 0;
+    width: 100%;
+    font-size: 2vw;
+  }
+
+  .section-sur,
+  .div-section,
+  .section-este,
+  .section-oeste,
+  .aside-atractivos {
+    padding: 1.5vw; 
+    gap: 1vw;
+    font-size: 3.5vw;
+  }
+
+  .iframe-sur {
+    height: 20vw;
+    
+  }
+
+  .section-img-atractivos {
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 3vw;
+  }
+
+  .article-atractivos,
+  .p-sur,
+  .p-este,
+  .p-oeste {
+    font-size: 3.5vw;
+  }
+
+  .article-imagen,
+  .img-oeste {
+    width: 80%;
+    margin: 3vw 10% 3vw;
+  }
+}
+

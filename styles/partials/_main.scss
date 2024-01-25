@@ -1,0 +1,257 @@
+@font-face {
+    font-family: 'Rubik';
+    src: url(../../fonts/RubikDoodleShadow-Regular.ttf);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+// TITULO TITULO
+.titulo{
+    font-family: 'Rubik';
+    font-size: 4rem; 
+    text-align: center;
+    align-items: center;
+}
+
+// NAVBAR NAVBAR 
+
+.navbarPrincipal{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(117, 164, 251, 0.503);
+    font-size: 1.1rem; 
+    .navbar-nav {
+        display: flex;
+        align-items: center;
+
+        .nav-item {
+            margin-right: 1rem;  
+        }
+        .nav-item:last-child {
+            margin-right: 0;
+            border-left: 1px solid #fff;
+            font-weight: bold;
+        }    
+    }
+}
+// GRILLA DE IMÁGENES
+.sectionPrincipal {
+    text-align: center;
+    padding-block: 1vw; 
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(40%, 1fr)); 
+        gap: 2rem; 
+        
+        .grid-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem; 
+        
+        
+        }
+        .description {
+            position: absolute;
+            bottom: 0;
+            left: 10rem; 
+            width: 60%;
+            background-color: rgba(16, 99, 254, 0.5);
+            color: #fff;
+            padding: 1rem; 
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+    }
+}
+
+// ANIMACION INDEX 
+.grid-container {
+    display: grid;
+    place-items: center;
+    
+    .grid-img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease-in-out;
+      }
+      
+    .grid-img:hover {
+        transform: scale(1.1);
+      }
+    .grid-item:hover .description {
+        opacity: 1;
+    }
+}
+  
+//FOOTER FOOTER FOOTER
+.footer {
+    bottom: 0;
+    width: 100%;
+    font-size: 1rem; 
+    text-align: center;
+    background-color: rgba(117, 164, 251, 0.503);
+    text-decoration: solid;
+  }
+
+// NORTE NORTE
+//carousel 
+.section-carousel{
+    margin-top: 2.5rem;
+}
+
+#carouselExampleAutoplaying {
+    display: flex;
+    width: 1000px; 
+    margin: 0 auto;
+}
+  
+#carouselExampleAutoplaying .carousel-inner img {
+    display: flex;
+    max-width: 1000px;
+    height: auto;
+}
+
+.div-section-norte{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem; 
+    padding-bottom: 0;
+    gap: 2rem; 
+    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr)); 
+    font-size: 1.1rem; 
+    justify-content: center;
+    
+    .section-clima, .section-conclusion{
+        font-size: 1.1rem; 
+        color: #333; 
+        margin-bottom: 1rem; 
+        padding: 1rem; 
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #f9f9f9; 
+    }
+    .aside-atractivos {
+        font-size: 1.1rem;
+        color: #333;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        overflow: hidden;
+        margin-right: 5rem;
+    }
+    .section-atractivos{
+        font-size: 1.1rem;
+        color: #333;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        overflow: hidden;     
+        margin-right: 5rem;
+            .section-img-atractivos {
+            float: right; 
+            width: 70%; 
+            margin-top: 2rem; 
+            margin-left: 5rem;
+            
+            } 
+    
+    } 
+}
+   
+// // SUR SUR SUR SUR
+.div-section-sur{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem; 
+    padding-bottom: 0;
+    gap: 2rem; 
+    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr)); 
+    font-size: 1.1rem; 
+    justify-content: center;
+
+        .section-resumen-sur{
+            font-size: 1.1rem; 
+            color: #333; 
+            margin-bottom: 1rem; 
+            padding: 1rem; 
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;  font-size: 1.1rem; 
+            color: #333; 
+            margin-bottom: 1rem; 
+            padding: 1rem; 
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9; 
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            margin-left: 0;
+          }
+        
+          th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+          }
+        
+          th {
+            background-color: #f2f2f2;
+          }
+    .section-atractivos-sur{
+        font-size: 1.1rem;
+        color: #333;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        overflow: hidden;     
+        margin-right: 5rem;
+        .section-img-atractivos-sur{
+            float: right; 
+            width: 70%; 
+            margin-top: 2rem; 
+            margin-left: 5rem;
+        }
+    }
+        .article-atractivos-sur{
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            overflow: hidden;     
+            margin-right: 5rem;
+            .aside-atractivos-sur{
+                font-size: 1.1rem;
+                color: #333;
+                margin-bottom: 1rem;
+                padding: 1rem;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                background-color: #f9f9f9;
+                overflow: hidden;
+                margin-right: 5rem;
+             }
+        }
+}
+

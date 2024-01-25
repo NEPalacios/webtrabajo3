@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="./styles/partials/principal.css">
+    <title>Inicio</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="titulo">El Blog Viajero</h1>
+    </header>
+    <nav class="navbarPrincipal">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+            <div class="container-fluid">
+                <a class="navbar-brand " href="./index.html">INICIO | </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/norte.html"> Norte </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/sur.html"> Sur</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/este.html"> Este </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/oeste.html"> Oeste </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/contacto.html"> | Contacto </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </nav>
+
+
+    <section class="sectionPrincipal">
+        <div>
+            <h3>Recuerdos de mis viajes por la Argentina</h3>
+            <p>Este es un pequeño blog para la entrega del trabajo n2. </p>
+            <p>Recuerdos de mis viajes por la hermosa Argentina,</p>
+            <p>entre los años 2020 y 2023.</p>
+        </div>
+        <hr>
+        <!-- GRILLA DE IMAGENES -->
+        <div class="grid-container">
+
+            <div class="grid-item">
+                <a href="./pages/norte.html">
+                    <img src="./img/norte/cafayate.jpg" class="grid-img">
+                    <div class="description">Cafayate y sus colores / NORTE</div>
+                </a>
+            </div>
+            <div class="grid-item">
+                <a href="./pages/sur.html">
+                    <img src="./img/sur/0005104647.jpg" class="grid-img">
+                    <div class="description">Nuestra Patagonia / SUR</div>
+                </a>
+            </div>
+            <div class="grid-item">
+                <a href="./pages/este.html">
+                    <img src="./img/este/delta.jpg" class="grid-img">
+                    <div class="description">Delta del Paraná / ESTE</div>
+                </a>
+            </div>
+            <div class="grid-item">
+                <a href="./pages/oeste.html">
+                    <img src="./img/oeste/mendoza.jpg" class="grid-img">
+                    <div class="description">Viñedos, Termas y más / OESTE</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" > Palacios Nicolas ® 2024</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
