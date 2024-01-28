@@ -2,6 +2,13 @@
   font-family: "Rubik";
   src: url(../../fonts/RubikDoodleShadow-Regular.ttf);
 }
+:root {
+  --clr-navbar: #383D3B;
+  --clr-content: #EEE5E9;
+  --clr-content2: #7C7C7C;
+  --clr-footer: #92DCE5;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +25,7 @@
 .navbarPrincipal {
   display: flex;
   justify-content: center;
-  background-color: rgba(117, 164, 251, 0.503);
+  background-color: var(--clr-navbar);
   font-size: 1.1rem;
 }
 .navbarPrincipal .navbar-nav {
@@ -53,7 +60,7 @@
   bottom: 0;
   left: 10rem;
   width: 60%;
-  background-color: rgba(16, 99, 254, 0.5);
+  background-color: var(--clr-navbar);
   color: #fff;
   padding: 1rem;
   text-align: center;
@@ -82,7 +89,7 @@
   width: 100%;
   font-size: 1rem;
   text-align: center;
-  background-color: rgba(117, 164, 251, 0.503);
+  background-color: var(--clr-footer);
   -webkit-text-decoration: solid;
           text-decoration: solid;
 }
@@ -121,16 +128,16 @@
   padding: 1rem;
   border: 1px solid #ddd;
   border-radius: 8px;
-  background-color: #f9f9f9;
+  background-color: var(--clr-content);
 }
 .div-section-norte .aside-atractivos {
   font-size: 1.1rem;
-  color: #333;
+  color: white;
   margin-bottom: 1rem;
   padding: 1rem;
   border: 1px solid #ddd;
   border-radius: 8px;
-  background-color: #f9f9f9;
+  background-color: var(--clr-content2);
   overflow: hidden;
   margin-right: 5rem;
 }
@@ -141,7 +148,7 @@
   padding: 1rem;
   border: 1px solid #ddd;
   border-radius: 8px;
-  background-color: #f9f9f9;
+  background-color: var(--clr-content);
   overflow: hidden;
   margin-right: 5rem;
 }
@@ -150,6 +157,7 @@
   width: 70%;
   margin-top: 2rem;
   margin-left: 5rem;
+  border-radius: 3rem;
 }
 
 .div-section-sur {
@@ -170,14 +178,7 @@
   padding: 1rem;
   border: 1px solid #ddd;
   border-radius: 8px;
-  background-color: #f9f9f9;
-  font-size: 1.1rem;
-  color: #333;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: #f9f9f9;
+  background-color: var(--clr-content);
 }
 .div-section-sur table {
   width: 100%;
@@ -191,7 +192,8 @@
   text-align: left;
 }
 .div-section-sur th {
-  background-color: #f2f2f2;
+  background-color: var(--clr-navbar);
+  color: white;
 }
 .div-section-sur .section-atractivos-sur {
   font-size: 1.1rem;
@@ -200,13 +202,13 @@
   padding: 1rem;
   border: 1px solid #ddd;
   border-radius: 8px;
-  background-color: #f9f9f9;
+  background-color: var(--clr-content);
   overflow: hidden;
-  margin-right: 5rem;
+  margin-right: 6rem;
 }
 .div-section-sur .section-atractivos-sur .section-img-atractivos-sur {
   float: right;
-  width: 70%;
+  width: 40%;
   margin-top: 2rem;
   margin-left: 5rem;
 }
@@ -217,18 +219,7 @@
   padding: 1rem;
   border: 1px solid #ddd;
   border-radius: 8px;
-  background-color: #f9f9f9;
-  overflow: hidden;
-  margin-right: 5rem;
-}
-.div-section-sur .article-atractivos-sur .aside-atractivos-sur {
-  font-size: 1.1rem;
-  color: #333;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: #f9f9f9;
+  background-color: var(--clr-content);
   overflow: hidden;
   margin-right: 5rem;
 }
@@ -275,7 +266,7 @@
 }
 .div-section-este .div-aside-este .section-img-atractivos-este img {
   width: 100%;
-  height: 100%;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
@@ -335,4 +326,86 @@
   border-radius: 5rem;
   font-size: 1.5rem;
   margin-top: -50px;
+}
+
+.div-section-oeste {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+  padding-bottom: 0;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+  font-size: 1.1rem;
+  justify-content: center;
+}
+.div-section-oeste .section-atractivos-oeste {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+.div-section-oeste .table-oeste {
+  margin: 2rem 3rem 4rem 4rem;
+}
+.div-section-oeste .table-oeste table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  margin-left: 0;
+}
+.div-section-oeste .table-oeste th, .div-section-oeste .table-oeste td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+.div-section-oeste .table-oeste th {
+  background-color: #f2f2f2;
+}
+.div-section-oeste .div-aside-oeste {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+  padding-bottom: 0;
+  gap: 2rem;
+  font-size: 1.1rem;
+  justify-content: center;
+}
+.div-section-oeste .div-aside-oeste .aside-atractivos-oeste {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.section-tarjetas {
+  padding: 60px;
+  display: flex;
+  gap: 30px;
+}
+.section-tarjetas .tarjeta-atractivos-oeste {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-inline: 10px;
+  font-size: 1.1rem;
+  color: #333;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  margin-right: 5rem;
+  text-align: center;
+  height: auto;
+}
+.section-tarjetas .tarjeta-atractivos-oeste .img-tarjeta {
+  max-width: auto;
 }/*# sourceMappingURL=principal.css.map */
