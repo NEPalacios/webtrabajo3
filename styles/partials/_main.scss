@@ -5,10 +5,10 @@
 }
 
 :root{
-    --clr-navbar: #383D3B;
-    --clr-content: #EEE5E9;
-    --clr-content2: #7C7C7C;
-    --clr-footer: #92DCE5;
+    --clr-navbar: #3A6EA5;
+    --clr-content: #c0c0c086;
+    --clr-content2: #b4b1b1;
+    --clr-footer: #3A6EA5;
 }
 
 * {
@@ -25,8 +25,19 @@
     align-items: center;
 }
 
-// NAVBAR NAVBAR 
+@mixin centro-vertical{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+@mixin margin-y-border{
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+// NAVBAR NAVBAR 
 .navbarPrincipal{
     display: flex;
     justify-content: center;
@@ -39,11 +50,6 @@
         .nav-item {
             margin-right: 1rem;  
         }
-        .nav-item:last-child {
-            margin-right: 0;
-            border-left: 1px solid #fff;
-            font-weight: bold;
-        }    
     }
 }
 // GRILLA DE IMÁGENES
@@ -103,6 +109,7 @@
     width: 100%;
     font-size: 1rem; 
     text-align: center;
+    color: white;
     background-color: var(--clr-footer);
     text-decoration: solid;
   }
@@ -128,9 +135,7 @@
 
 // NORTE NORTE
 .div-section-norte{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include centro-vertical();
     padding: 3rem; 
     padding-bottom: 0;
     gap: 2rem; 
@@ -149,11 +154,9 @@
     }
     .aside-atractivos {
         font-size: 1.1rem;
-        color: white;
-        margin-bottom: 1rem;
-        padding: 1rem;
-        border: 1px solid #ddd;
-        border-radius: 8px;
+        font-weight: 400;
+        color: black;
+        @mixin margin-y-border();
         background-color: var(--clr-content2);
         overflow: hidden;
         margin-right: 5rem;
@@ -161,10 +164,7 @@
     .section-atractivos{
         font-size: 1.1rem;
         color: #333;
-        margin-bottom: 1rem;
-        padding: 1rem;
-        border: 1px solid #ddd;
-        border-radius: 8px;
+        @mixin margin-y-border();
         background-color: var(--clr-content);
         overflow: hidden;     
         margin-right: 5rem;
@@ -182,9 +182,7 @@
    
 // // SUR SUR SUR SUR
 .div-section-sur{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+   @include centro-vertical();
     padding: 3rem; 
     padding-bottom: 0;
     gap: 2rem; 
@@ -199,32 +197,37 @@
             padding: 1rem; 
             border: 1px solid #ddd;
             border-radius: 8px;
+            font-style: italic;
             background-color: var(--clr-content);  
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            margin-left: 0;
-          }
-        
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
+        .table-sur{
+
+            border: black;
+            font-style:italic;    
+            font-weight: 500;    
+            background-color: var(--clr-content);
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+                margin-left: 0;
+    
+            }
+            
+            th, td {
+                border: 1px solid black;
+                padding: 8px;
+                text-align: left;
+            }
+            
+            th {
+                background-color: var(--clr-navbar);
+            }
         }
-        
-        th {
-            background-color: var(--clr-navbar);
-            color: white;
-          }
     .section-atractivos-sur{
         font-size: 1.1rem;
         color: #333;
-        margin-bottom: 1rem;
-        padding: 1rem;
-        border: 1px solid #ddd;
-        border-radius: 8px;
+@mixin
         background-color: var(--clr-content); 
         overflow: hidden;     
 
@@ -235,27 +238,23 @@
             margin-top: 2rem; 
             margin-left: 5rem;
         }
-    }
         .article-atractivos-sur{
             font-size: 1.1rem;
-            color: #333;
+            color: black;
             margin-bottom: 1rem;
             padding: 1rem;
             border: 1px solid #ddd;
             border-radius: 8px;
-            background-color: var(--clr-content);
-            overflow: hidden;     
+            background-color: var(--clr-content2);
+            overflow: hidden;
             margin-right: 5rem;
-
-
         }
+    }
 }
 
 // ESTE ESTE ESTE ESTE
 .div-section-este{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include centro-vertical();
     padding: 3rem; 
     padding-bottom: 0;
     gap: 2rem; 
@@ -269,7 +268,7 @@
             padding: 1rem; 
             border: 1px solid #ddd;
             border-radius: 8px;
-            background-color: #f9f9f9; 
+            background-color: var(--clr-content); 
         }
 
         .article-atractivos-este{
@@ -279,7 +278,7 @@
             padding: 1rem;
             border: 1px solid #ddd;
             border-radius: 8px;
-            background-color: #f9f9f9;
+            background-color: var(--clr-content);
             overflow: hidden;     
             margin-right: 5rem;
 
@@ -309,7 +308,7 @@
                 padding: 1rem;
                 border: 1px solid #ddd;
                 border-radius: 8px;
-                background-color: #f9f9f9;
+                background-color: var(--clr-content);
                 overflow: hidden;
                 margin-right: 5rem;
                 margin-top: 2rem;
@@ -321,18 +320,12 @@
 
     .section-conclusion-este{
         font-size: 1.1rem; 
-        color: #333; 
+        color: black; 
         margin-bottom: 1rem; 
         padding: 1rem; 
         border: 1px solid #ddd;
         border-radius: 8px;
-        background-color: #f9f9f9;  font-size: 1.1rem; 
-        color: #333; 
-        margin-bottom: 1rem; 
-        padding: 1rem; 
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        background-color: #f9f9f9; 
+        background-color: var(--clr-content2);  
         margin-bottom: 5rem;
         text-align: center;
     }
@@ -372,9 +365,7 @@
 
 // OESTE OESTE OESTE OESTE
 .div-section-oeste{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include centro-vertical();
     padding: 3rem; 
     padding-bottom: 0;
     gap: 2rem; 
@@ -389,10 +380,14 @@
         padding: 1rem; 
         border: 1px solid #ddd;
         border-radius: 8px;
-        background-color: #f9f9f9; 
+        background-color: var(--clr-content); 
     }
     .table-oeste{
         margin: 2rem 3rem 4rem 4rem;
+        border: black;
+        font-style:italic;
+        font-weight: 500;        
+        background-color: var(--clr-content2);
         table {
             width: 100%;
             border-collapse: collapse;
@@ -402,13 +397,13 @@
         }
         
         th, td {
-            border: 1px solid #ddd;
+            border: 1px solid black;
             padding: 8px;
             text-align: left;
         }
         
         th {
-            background-color: #f2f2f2;
+            background-color: var(--clr-navbar);
         }
     }
 
@@ -446,12 +441,13 @@
             flex-direction: column;
             gap: 20px;
             padding-inline:10px ;
-            font-size: 1.1rem;
-            color: #333;
+            font-style: italic;
+
+            color: black;
             padding: 1rem;
             border: 1px solid #ddd;
             border-radius: 8px;
-            background-color: #f9f9f9;
+            background-color: var(--clr-content2);
             margin-right: 5rem;
             text-align: center;
             height: auto;

@@ -3,10 +3,10 @@
   src: url(../../fonts/RubikDoodleShadow-Regular.ttf);
 }
 :root {
-  --clr-navbar: #383D3B;
-  --clr-content: #EEE5E9;
-  --clr-content2: #7C7C7C;
-  --clr-footer: #92DCE5;
+  --clr-navbar: #3A6EA5;
+  --clr-content: #c0c0c086;
+  --clr-content2: #b4b1b1;
+  --clr-footer: #3A6EA5;
 }
 
 * {
@@ -34,11 +34,6 @@
 }
 .navbarPrincipal .navbar-nav .nav-item {
   margin-right: 1rem;
-}
-.navbarPrincipal .navbar-nav .nav-item:last-child {
-  margin-right: 0;
-  border-left: 1px solid #fff;
-  font-weight: bold;
 }
 
 .sectionPrincipal {
@@ -89,6 +84,7 @@
   width: 100%;
   font-size: 1rem;
   text-align: center;
+  color: white;
   background-color: var(--clr-footer);
   -webkit-text-decoration: solid;
           text-decoration: solid;
@@ -132,7 +128,8 @@
 }
 .div-section-norte .aside-atractivos {
   font-size: 1.1rem;
-  color: white;
+  font-weight: 400;
+  color: black;
   margin-bottom: 1rem;
   padding: 1rem;
   border: 1px solid #ddd;
@@ -178,22 +175,28 @@
   padding: 1rem;
   border: 1px solid #ddd;
   border-radius: 8px;
+  font-style: italic;
   background-color: var(--clr-content);
 }
-.div-section-sur table {
+.div-section-sur .table-sur {
+  border: black;
+  font-style: italic;
+  font-weight: 500;
+  background-color: var(--clr-content);
+}
+.div-section-sur .table-sur table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
   margin-left: 0;
 }
-.div-section-sur th, .div-section-sur td {
-  border: 1px solid #ddd;
+.div-section-sur .table-sur th, .div-section-sur .table-sur td {
+  border: 1px solid black;
   padding: 8px;
   text-align: left;
 }
-.div-section-sur th {
+.div-section-sur .table-sur th {
   background-color: var(--clr-navbar);
-  color: white;
 }
 .div-section-sur .section-atractivos-sur {
   font-size: 1.1rem;
@@ -212,14 +215,14 @@
   margin-top: 2rem;
   margin-left: 5rem;
 }
-.div-section-sur .article-atractivos-sur {
+.div-section-sur .section-atractivos-sur .article-atractivos-sur {
   font-size: 1.1rem;
-  color: #333;
+  color: black;
   margin-bottom: 1rem;
   padding: 1rem;
   border: 1px solid #ddd;
   border-radius: 8px;
-  background-color: var(--clr-content);
+  background-color: var(--clr-content2);
   overflow: hidden;
   margin-right: 5rem;
 }
@@ -242,7 +245,7 @@
   padding: 1rem;
   border: 1px solid #ddd;
   border-radius: 8px;
-  background-color: #f9f9f9;
+  background-color: var(--clr-content);
 }
 .div-section-este .article-atractivos-este {
   font-size: 1.1rem;
@@ -251,7 +254,7 @@
   padding: 1rem;
   border: 1px solid #ddd;
   border-radius: 8px;
-  background-color: #f9f9f9;
+  background-color: var(--clr-content);
   overflow: hidden;
   margin-right: 5rem;
 }
@@ -278,7 +281,7 @@
   padding: 1rem;
   border: 1px solid #ddd;
   border-radius: 8px;
-  background-color: #f9f9f9;
+  background-color: var(--clr-content);
   overflow: hidden;
   margin-right: 5rem;
   margin-top: 2rem;
@@ -287,19 +290,12 @@
 }
 .div-section-este .section-conclusion-este {
   font-size: 1.1rem;
-  color: #333;
+  color: black;
   margin-bottom: 1rem;
   padding: 1rem;
   border: 1px solid #ddd;
   border-radius: 8px;
-  background-color: #f9f9f9;
-  font-size: 1.1rem;
-  color: #333;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: #f9f9f9;
+  background-color: var(--clr-content2);
   margin-bottom: 5rem;
   text-align: center;
 }
@@ -346,10 +342,14 @@
   padding: 1rem;
   border: 1px solid #ddd;
   border-radius: 8px;
-  background-color: #f9f9f9;
+  background-color: var(--clr-content);
 }
 .div-section-oeste .table-oeste {
   margin: 2rem 3rem 4rem 4rem;
+  border: black;
+  font-style: italic;
+  font-weight: 500;
+  background-color: var(--clr-content2);
 }
 .div-section-oeste .table-oeste table {
   width: 100%;
@@ -358,12 +358,12 @@
   margin-left: 0;
 }
 .div-section-oeste .table-oeste th, .div-section-oeste .table-oeste td {
-  border: 1px solid #ddd;
+  border: 1px solid black;
   padding: 8px;
   text-align: left;
 }
 .div-section-oeste .table-oeste th {
-  background-color: #f2f2f2;
+  background-color: var(--clr-navbar);
 }
 .div-section-oeste .div-aside-oeste {
   display: flex;
@@ -396,16 +396,30 @@
   flex-direction: column;
   gap: 20px;
   padding-inline: 10px;
-  font-size: 1.1rem;
-  color: #333;
+  font-style: italic;
+  color: black;
   padding: 1rem;
   border: 1px solid #ddd;
   border-radius: 8px;
-  background-color: #f9f9f9;
+  background-color: var(--clr-content2);
   margin-right: 5rem;
   text-align: center;
   height: auto;
 }
 .section-tarjetas .tarjeta-atractivos-oeste .img-tarjeta {
   max-width: auto;
+}
+
+h2 {
+  text-align: center;
+  text-decoration: underline;
+}
+
+h3, h4 {
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+span {
+  font-weight: bold;
 }/*# sourceMappingURL=principal.css.map */
