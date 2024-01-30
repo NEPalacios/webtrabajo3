@@ -178,26 +178,6 @@
   font-style: italic;
   background-color: var(--clr-content);
 }
-.div-section-sur .table-sur {
-  border: black;
-  font-style: italic;
-  font-weight: 500;
-  background-color: var(--clr-content);
-}
-.div-section-sur .table-sur table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-  margin-left: 0;
-}
-.div-section-sur .table-sur th, .div-section-sur .table-sur td {
-  border: 1px solid black;
-  padding: 8px;
-  text-align: left;
-}
-.div-section-sur .table-sur th {
-  background-color: var(--clr-navbar);
-}
 .div-section-sur .section-atractivos-sur {
   font-size: 1.1rem;
   color: #333;
@@ -226,6 +206,11 @@
   overflow: hidden;
   margin-right: 5rem;
 }
+.div-section-sur .section-tarjetas-sur {
+  padding: 60px;
+  display: flex;
+  gap: 30px;
+}
 
 .div-section-este {
   display: flex;
@@ -241,8 +226,8 @@
 .div-section-este .section-atractivos-este {
   font-size: 1.1rem;
   color: #333;
-  margin-bottom: 1rem;
   padding: 1rem;
+  margin-bottom: 1rem;
   border: 1px solid #ddd;
   border-radius: 8px;
   background-color: var(--clr-content);

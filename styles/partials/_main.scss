@@ -31,7 +31,7 @@
     align-items: center;
 }
 
-@mixin margin-y-border{
+@mixin marginyBorder{
     margin-bottom: 1rem;
     padding: 1rem;
     border: 1px solid #ddd;
@@ -156,7 +156,7 @@
         font-size: 1.1rem;
         font-weight: 400;
         color: black;
-        @mixin margin-y-border();
+        @include marginyBorder;
         background-color: var(--clr-content2);
         overflow: hidden;
         margin-right: 5rem;
@@ -164,7 +164,7 @@
     .section-atractivos{
         font-size: 1.1rem;
         color: #333;
-        @mixin margin-y-border();
+        @include marginyBorder;
         background-color: var(--clr-content);
         overflow: hidden;     
         margin-right: 5rem;
@@ -200,38 +200,15 @@
             font-style: italic;
             background-color: var(--clr-content);  
         }
-        .table-sur{
 
-            border: black;
-            font-style:italic;    
-            font-weight: 500;    
-            background-color: var(--clr-content);
-            table {
-                width: 100%;
-                border-collapse: collapse;
-                margin-top: 20px;
-                margin-left: 0;
-    
-            }
-            
-            th, td {
-                border: 1px solid black;
-                padding: 8px;
-                text-align: left;
-            }
-            
-            th {
-                background-color: var(--clr-navbar);
-            }
-        }
     .section-atractivos-sur{
         font-size: 1.1rem;
         color: #333;
-@mixin
+        @include marginyBorder;
         background-color: var(--clr-content); 
         overflow: hidden;     
-
         margin-right: 6rem;
+        
         .section-img-atractivos-sur{
             float: right;
             width: 40%; 
@@ -247,9 +224,33 @@
             border-radius: 8px;
             background-color: var(--clr-content2);
             overflow: hidden;
-            margin-right: 5rem;
+            margin-right: 5rem;         
+            
         }
     }
+        .section-tarjetas-sur{
+            padding: 60px;
+            display: flex;
+            gap: 30px;
+            .tarjeta-atractivos-sur{
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding-inline:10px ;
+                font-style: italic;
+    
+                color: black;
+                padding: 1rem;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                background-color: var(--clr-content2);
+                margin-right: 5rem;
+                text-align: center;
+                height: auto;
+                
+        }
+        
 }
 
 // ESTE ESTE ESTE ESTE
@@ -264,8 +265,8 @@
         .section-atractivos-este{
             font-size: 1.1rem; 
             color: #333; 
-            margin-bottom: 1rem; 
             padding: 1rem; 
+            margin-bottom: 1rem; 
             border: 1px solid #ddd;
             border-radius: 8px;
             background-color: var(--clr-content); 
@@ -429,32 +430,3 @@
 
     }
 }
-
-.section-tarjetas{
-    padding: 60px;
-    display: flex;
-    gap: 30px;
-    
-        .tarjeta-atractivos-oeste{
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            padding-inline:10px ;
-            font-style: italic;
-
-            color: black;
-            padding: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            background-color: var(--clr-content2);
-            margin-right: 5rem;
-            text-align: center;
-            height: auto;
-
-            .img-tarjeta{
-                max-width: auto; 
-            }
-        }
-}
-
