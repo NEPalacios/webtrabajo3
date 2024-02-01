@@ -1,125 +1,124 @@
-// ESTE ESTE ESTE ESTE
-.div-section-este{
-  
-    @include centro-vertical();
-
-    padding: 3rem; 
-    padding-bottom: 0;
-    gap: 2rem;  
-    font-size: 1.1rem; 
-    justify-content: center;
-    
-        .section-atractivos-este{
-            font-size: 1.1rem; 
-            color: #333; 
-            padding: 1rem; 
-            margin-bottom: 1rem; 
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            background-color: var(--clr-content); 
-        }
-
-        .article-atractivos-este{
-            font-size: 1.1rem; 
-            color: #333; 
-            padding: 1rem; 
-            margin-bottom: 1rem; 
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            background-color: var(--clr-content);  
-
-        }
-        
-        .div-aside-este {
-          @include tablet{
-            display: flex;
-            flex-direction: column ;
-          }
-      
+$clr-navbar: var(--clr-navbar);
+$clr-content: var(--clr-content);
+$clr-content2: var(--clr-content2);
 
 
-            .section-img-atractivos-este {
-              float: left;
-              width: 60%;
-              margin-right: 5rem;
-              margin-bottom:2rem;
-              @include tablet{
-                min-width: 500px;
-              }
+.div-section-este {
+  @include centro-vertical();
+  padding: 3rem;
+  padding-bottom: 0;
+  gap: 2rem;
+  font-size: 1.1rem;
+  justify-content: center;
 
-            }
-          
-
-}
-.div-todo-este{
-
-  margin-bottom: 3rem;
-  .aside-atractivos-este {
-
-    font-size: 1.1rem;
-    color: #333;
-    margin-bottom: 1rem;
-    margin-right: 5rem;
-    margin-top: 2rem;
-    margin: auto;
-    padding: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: var(--clr-content);
-    overflow: hidden;
-    text-align: center;
-    height: 100%;
+  @include tablet {
+    max-width: 100vw;
+    font-size: 1.7rem;
+    & h2{
+      font-size: 2.2rem;
     }
   }
 
+  .section-atractivos-este{
+    font-size: 1.1rem;
+    color: #333;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border: 1px solid $clr-navbar;
+    background-color: $clr-content;
+    max-width: 100vw;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include tablet {
+      max-width: 100vw;
+      font-size: 1.4rem;
+      & h2{
+        font-size: 2.2rem;
+      }
+    }
+  }
+  
+  .article-atractivos-este {
+    font-size: 1.1rem;
+    color: #333;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border: 1px solid $clr-navbar;
+    background-color: $clr-content;
+     max-width: 100vw;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include tablet {
+      max-width: 100vw;
+      font-size: 1.4rem;
+      & h2{
+        font-size: 2.2rem;
+      }
+    }
+  }
+    .section-img-atractivos-este {
+      display: flex;
+      width: 700px;
+      margin-right: 5rem;
+      margin-bottom: 2rem;
+      border: 1px solid $clr-navbar;
+      justify-content: center;
+
+      @include tablet {
+       width: 70%;
+      }
+
+      img {
+
+      }
+
+    }
+    .aside-atractivos-este {
+      font-size: 1.1rem;
+      color: #333;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      border: 1px solid $clr-navbar;
+      background-color: $clr-content;
+      max-width: 100vw;
+      margin-left: auto;
+      margin-right: auto;
+
+      @include tablet {
+        max-width: 100vw;
+        font-size: 1.4rem;
+        & h2{
+          font-size: 2.2rem;
+        }
+    }
+    
+  }
 }
+
 .section-conclusion-este{
-  font-size: 1.1rem; 
-  color: black; 
-  padding: 2rem; 
-  margin: 2rem;
-  border: 1px solid #ddd;
+  font-size: 1.1rem;
+  color: #333;
+  padding: 1rem;
+  margin-bottom: 1rem;
   border-radius: 8px;
-  background-color: var(--clr-content2);  
-  margin-bottom: 3rem;
-  text-align: center;
+  border: 1px solid $clr-navbar;
+  background-color: $clr-content;
+  max-width: 100vw;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+  
+  @include tablet {
+    max-width: 100vw;
+    font-size: 1.4rem;
+    & h2{
+      font-size: 2.2rem;
+    }
+  }
 }
 
-
-.div-carousel-este {
-    #carouselExample {
-      width:40%;
-      margin-top: 5rem;
-      margin: 0 auto;
-
-  
-      .carousel-inner {
-        .carousel-item {
-      text-align: center;
-
-            img {
-            max-width: 70%; 
-            height: auto; 
-            display: inline-block; 
-              @include tablet{
-                min-width: 250px;
-              }
-
-            }
-        }
-    }
-  
-      .carousel-control-prev,
-      .carousel-control-next {
-        width: 1.3rem;
-        background-color: #494b4993; 
-        color: #fff;
-        border: none; 
-        border-radius: 5rem;
-        font-size: 1.5rem; 
-        margin-top: -50px; 
-      
-        }
-    }
-}
 

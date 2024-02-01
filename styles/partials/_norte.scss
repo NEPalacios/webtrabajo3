@@ -6,6 +6,7 @@
         display: flex;
         width: 800px; 
         margin: 0 auto;
+
     }
     
     #carouselExampleAutoplaying .carousel-inner img {
@@ -31,26 +32,32 @@
     
     
     .section-clima, .section-conclusion{
-        
-        font-size: 1.1rem; 
         color: #333; 
         margin-bottom: 1rem; 
         padding: 1rem; 
-        border: 1px solid #ddd;
         border-radius: 8px;
+        border: 1px solid var(--clr-navbar);
         background-color: var(--clr-content); 
-        
+        @include tablet{
+            font-size: 1.3rem;
+        }
+        @include mobile{
+            width: 100vw;
+            font-size: 3rem;
+        }
     }
+
     .aside-atractivos {
         @include tablet{
-            display: flex;
-            flex-direction: column;
+        display: flex;
+        flex-direction: column;
         }
-        font-size: 1.1rem;
+        
         font-weight: 400;
         color: black;
         @include marginyBorder;
         background-color: var(--clr-content2);
+        border: 1px solid var(--clr-navbar);
         overflow: hidden;
         margin-right: 5rem;
 
@@ -59,17 +66,18 @@
         font-size: 1.1rem;
         color: #333;
         @include marginyBorder;
+        border: 1px solid var(--clr-navbar);
         background-color: var(--clr-content);
         overflow: hidden;     
         margin-right: 5rem;
 
             .section-img-atractivos {
+            border: 1px solid var(--clr-navbar);
             float: right; 
             width: 70%; 
             margin-top: 2rem; 
             margin-left: 5rem;
             border-radius: 3rem;
-            
             } 
     
     } 
