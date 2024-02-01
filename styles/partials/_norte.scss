@@ -1,0 +1,77 @@
+//carousel index
+.section-carousel{
+    margin: 2rem 2rem 2rem 2rem;
+}
+    #carouselExampleAutoplaying {
+        display: flex;
+        width: 800px; 
+        margin: 0 auto;
+    }
+    
+    #carouselExampleAutoplaying .carousel-inner img {
+        display: flex;
+        max-width: 800px;
+        height: auto;
+    }
+
+
+
+
+
+// NORTE NORTE
+.div-section-norte{
+    @include centro-vertical();
+    padding: 3rem; 
+    padding-bottom: 0;
+    gap: 2rem; 
+    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr)); 
+    font-size: 1.1rem; 
+    justify-content: center;
+    
+    
+    
+    .section-clima, .section-conclusion{
+        
+        font-size: 1.1rem; 
+        color: #333; 
+        margin-bottom: 1rem; 
+        padding: 1rem; 
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: var(--clr-content); 
+        
+    }
+    .aside-atractivos {
+        @include tablet{
+            display: flex;
+            flex-direction: column;
+        }
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: black;
+        @include marginyBorder;
+        background-color: var(--clr-content2);
+        overflow: hidden;
+        margin-right: 5rem;
+
+    }
+    .section-atractivos{
+        font-size: 1.1rem;
+        color: #333;
+        @include marginyBorder;
+        background-color: var(--clr-content);
+        overflow: hidden;     
+        margin-right: 5rem;
+
+            .section-img-atractivos {
+            float: right; 
+            width: 70%; 
+            margin-top: 2rem; 
+            margin-left: 5rem;
+            border-radius: 3rem;
+            
+            } 
+    
+    } 
+}
+   

@@ -9,19 +9,6 @@
   --clr-footer: #3A6EA5;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.titulo {
-  font-family: "Rubik";
-  font-size: 4rem;
-  text-align: center;
-  align-items: center;
-}
-
 .navbarPrincipal {
   display: flex;
   justify-content: center;
@@ -36,14 +23,32 @@
   margin-right: 1rem;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.titulo {
+  font-family: "Rubik";
+  font-size: 4rem;
+  text-align: center;
+  align-items: center;
+}
+
 .sectionPrincipal {
   text-align: center;
   padding-block: 1vw;
 }
 .sectionPrincipal .grid-container {
-  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
   gap: 2rem;
+}
+@media screen and (max-width: 850px) {
+  .sectionPrincipal .grid-container {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .sectionPrincipal .grid-container .grid-item {
   position: relative;
@@ -91,18 +96,18 @@
 }
 
 .section-carousel {
-  margin-top: 2.5rem;
+  margin: 2rem 2rem 2rem 2rem;
 }
 
 #carouselExampleAutoplaying {
   display: flex;
-  width: 1000px;
+  width: 800px;
   margin: 0 auto;
 }
 
 #carouselExampleAutoplaying .carousel-inner img {
   display: flex;
-  max-width: 1000px;
+  max-width: 800px;
   height: auto;
 }
 
@@ -137,6 +142,12 @@
   background-color: var(--clr-content2);
   overflow: hidden;
   margin-right: 5rem;
+}
+@media screen and (max-width: 850px) {
+  .div-section-norte .aside-atractivos {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .div-section-norte .section-atractivos {
   font-size: 1.1rem;
@@ -206,11 +217,6 @@
   overflow: hidden;
   margin-right: 5rem;
 }
-.div-section-sur .section-tarjetas-sur {
-  padding: 60px;
-  display: flex;
-  gap: 30px;
-}
 
 .div-section-este {
   display: flex;
@@ -219,7 +225,6 @@
   padding: 3rem;
   padding-bottom: 0;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
   font-size: 1.1rem;
   justify-content: center;
 }
@@ -235,58 +240,62 @@
 .div-section-este .article-atractivos-este {
   font-size: 1.1rem;
   color: #333;
-  margin-bottom: 1rem;
   padding: 1rem;
+  margin-bottom: 1rem;
   border: 1px solid #ddd;
   border-radius: 8px;
   background-color: var(--clr-content);
-  overflow: hidden;
-  margin-right: 5rem;
 }
-.div-section-este .div-aside-este {
-  height: 100%;
+@media screen and (max-width: 850px) {
+  .div-section-este .div-aside-este {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .div-section-este .div-aside-este .section-img-atractivos-este {
   float: left;
-  width: 50%;
-  margin-top: 2rem;
+  width: 60%;
   margin-right: 5rem;
+  margin-bottom: 2rem;
 }
-.div-section-este .div-aside-este .section-img-atractivos-este img {
-  width: 100%;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-  display: block;
+@media screen and (max-width: 850px) {
+  .div-section-este .div-aside-este .section-img-atractivos-este {
+    min-width: 500px;
+  }
 }
-.div-section-este .div-aside-este .aside-atractivos-este {
+.div-section-este .div-todo-este {
+  margin-bottom: 3rem;
+}
+.div-section-este .div-todo-este .aside-atractivos-este {
   font-size: 1.1rem;
   color: #333;
   margin-bottom: 1rem;
+  margin-right: 5rem;
+  margin-top: 2rem;
+  margin: auto;
   padding: 1rem;
   border: 1px solid #ddd;
   border-radius: 8px;
   background-color: var(--clr-content);
   overflow: hidden;
-  margin-right: 5rem;
-  margin-top: 2rem;
   text-align: center;
   height: 100%;
 }
-.div-section-este .section-conclusion-este {
+
+.section-conclusion-este {
   font-size: 1.1rem;
   color: black;
-  margin-bottom: 1rem;
-  padding: 1rem;
+  padding: 2rem;
+  margin: 2rem;
   border: 1px solid #ddd;
   border-radius: 8px;
   background-color: var(--clr-content2);
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   text-align: center;
 }
 
 .div-carousel-este #carouselExample {
-  width: 50%;
+  width: 40%;
   margin-top: 5rem;
   margin: 0 auto;
 }
@@ -294,9 +303,14 @@
   text-align: center;
 }
 .div-carousel-este #carouselExample .carousel-inner .carousel-item img {
-  max-width: 80%;
+  max-width: 70%;
   height: auto;
   display: inline-block;
+}
+@media screen and (max-width: 850px) {
+  .div-carousel-este #carouselExample .carousel-inner .carousel-item img {
+    min-width: 250px;
+  }
 }
 .div-carousel-este #carouselExample .carousel-control-prev,
 .div-carousel-este #carouselExample .carousel-control-next {
@@ -368,31 +382,6 @@
   border: 1px solid #ddd;
   border-radius: 8px;
   background-color: #f9f9f9;
-}
-
-.section-tarjetas {
-  padding: 60px;
-  display: flex;
-  gap: 30px;
-}
-.section-tarjetas .tarjeta-atractivos-oeste {
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding-inline: 10px;
-  font-style: italic;
-  color: black;
-  padding: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: var(--clr-content2);
-  margin-right: 5rem;
-  text-align: center;
-  height: auto;
-}
-.section-tarjetas .tarjeta-atractivos-oeste .img-tarjeta {
-  max-width: auto;
 }
 
 h2 {

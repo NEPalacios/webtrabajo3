@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'Rubik';
+    src: url(../../fonts/RubikDoodleShadow-Regular.ttf);
+
+}
+
+
+:root{
+    --clr-navbar: #3A6EA5;
+    --clr-content: #c0c0c086;
+    --clr-content2: #b4b1b1;
+    --clr-footer: #3A6EA5;
+}
+@mixin centro-vertical{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin marginyBorder{
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}

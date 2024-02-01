@@ -1,0 +1,125 @@
+// ESTE ESTE ESTE ESTE
+.div-section-este{
+  
+    @include centro-vertical();
+
+    padding: 3rem; 
+    padding-bottom: 0;
+    gap: 2rem;  
+    font-size: 1.1rem; 
+    justify-content: center;
+    
+        .section-atractivos-este{
+            font-size: 1.1rem; 
+            color: #333; 
+            padding: 1rem; 
+            margin-bottom: 1rem; 
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: var(--clr-content); 
+        }
+
+        .article-atractivos-este{
+            font-size: 1.1rem; 
+            color: #333; 
+            padding: 1rem; 
+            margin-bottom: 1rem; 
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: var(--clr-content);  
+
+        }
+        
+        .div-aside-este {
+          @include tablet{
+            display: flex;
+            flex-direction: column ;
+          }
+      
+
+
+            .section-img-atractivos-este {
+              float: left;
+              width: 60%;
+              margin-right: 5rem;
+              margin-bottom:2rem;
+              @include tablet{
+                min-width: 500px;
+              }
+
+            }
+          
+
+}
+.div-todo-este{
+
+  margin-bottom: 3rem;
+  .aside-atractivos-este {
+
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 1rem;
+    margin-right: 5rem;
+    margin-top: 2rem;
+    margin: auto;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: var(--clr-content);
+    overflow: hidden;
+    text-align: center;
+    height: 100%;
+    }
+  }
+
+}
+.section-conclusion-este{
+  font-size: 1.1rem; 
+  color: black; 
+  padding: 2rem; 
+  margin: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: var(--clr-content2);  
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+
+.div-carousel-este {
+    #carouselExample {
+      width:40%;
+      margin-top: 5rem;
+      margin: 0 auto;
+
+  
+      .carousel-inner {
+        .carousel-item {
+      text-align: center;
+
+            img {
+            max-width: 70%; 
+            height: auto; 
+            display: inline-block; 
+              @include tablet{
+                min-width: 250px;
+              }
+
+            }
+        }
+    }
+  
+      .carousel-control-prev,
+      .carousel-control-next {
+        width: 1.3rem;
+        background-color: #494b4993; 
+        color: #fff;
+        border: none; 
+        border-radius: 5rem;
+        font-size: 1.5rem; 
+        margin-top: -50px; 
+      
+        }
+    }
+}
+

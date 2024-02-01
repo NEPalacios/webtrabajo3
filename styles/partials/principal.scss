@@ -1,4 +1,15 @@
-@import "main.scss";
+
+@import "media-queries";
+@import "variablesMixins.scss";
+
+@import "navbar.scss";
+@import "indexReset.scss";
+@import "norte.scss";
+@import "sur.scss";
+@import "este.scss";
+@import "oeste.scss";
+
+
 
 
 h2{
