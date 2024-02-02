@@ -3,6 +3,18 @@
     src: url(../../fonts/RubikDoodleShadow-Regular.ttf);
 
 }
+@mixin centro-vertical(){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin marginyBorder(){
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
 
 :root{
     --clr-navbar: #3A6EA5;
@@ -15,6 +27,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    @include tablet{
+        font-size: 1.4rem;
+    }
 }
 
 // TITULO TITULO
@@ -25,18 +40,7 @@
     align-items: center;
 }
 
-@mixin centro-vertical{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-@mixin marginyBorder{
-    margin-bottom: 1rem;
-    padding: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-}
 // NAVBAR NAVBAR 
 .navbarPrincipal{
     display: flex;
@@ -52,15 +56,19 @@
         }
     }
 }
+
 // GRILLA DE IMÁGENES
 .sectionPrincipal {
     text-align: center;
     padding-block: 1vw; 
 
     .grid-container {
-        display: grid;
         grid-template-columns: repeat(auto-fit, minmax(40%, 1fr)); 
         gap: 2rem; 
+        @include tablet{
+            display: flex;
+            flex-direction: column;
+        }
         
         .grid-item {
             position: relative;
@@ -83,6 +91,7 @@
         }
     }
 }
+
 
 // ANIMACION INDEX 
 .grid-container {
@@ -114,7 +123,6 @@
     text-decoration: solid;
   }
 
-
 //carousel 
 .section-carousel{
     margin-top: 2.5rem;
@@ -124,18 +132,28 @@
     display: flex;
     width: 1000px; 
     margin: 0 auto;
+    @include tablet{
+        display: flex;
+        width: 500px; 
+        margin: 0 auto;
+    }
 }
   
 #carouselExampleAutoplaying .carousel-inner img {
     display: flex;
     max-width: 1000px;
     height: auto;
+    @include tablet{
+        display: flex;
+        width: 500px; 
+        margin: 0 auto;
+    }
 }
 
 
 // NORTE NORTE
 .div-section-norte{
-    @include centro-vertical();
+    @include centro-vertical;
     padding: 3rem; 
     padding-bottom: 0;
     gap: 2rem; 
@@ -167,14 +185,19 @@
         @include marginyBorder;
         background-color: var(--clr-content);
         overflow: hidden;     
-        margin-right: 5rem;
+
             .section-img-atractivos {
             float: right; 
             width: 70%; 
             margin-top: 2rem; 
             margin-left: 5rem;
             border-radius: 3rem;
-            
+                @include tablet{
+                    display: flex;
+                    flex-direction: column;
+                    float:none;
+                    margin-bottom: 3rem;
+                }
             } 
     
     } 
@@ -189,15 +212,16 @@
     grid-template-columns: repeat(auto-fit, minmax(40%, 1fr)); 
     font-size: 1.1rem; 
     justify-content: center;
+  
 
         .section-resumen-sur{
             font-size: 1.1rem; 
             color: #333; 
             margin-bottom: 1rem; 
             padding: 1rem; 
-            border: 1px solid #ddd;
             border-radius: 8px;
             font-style: italic;
+            border: 1px solid var(--clr-navbar);
             background-color: var(--clr-content);  
         }
 
@@ -205,53 +229,49 @@
         font-size: 1.1rem;
         color: #333;
         @include marginyBorder;
+        border: 1px solid var(--clr-navbar);
         background-color: var(--clr-content); 
         overflow: hidden;     
         margin-right: 6rem;
-        
-        .section-img-atractivos-sur{
-            float: right;
-            width: 40%; 
-            margin-top: 2rem; 
-            margin-left: 5rem;
-        }
-        .article-atractivos-sur{
-            font-size: 1.1rem;
-            color: black;
-            margin-bottom: 1rem;
-            padding: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            background-color: var(--clr-content2);
-            overflow: hidden;
-            margin-right: 5rem;         
-            
+
+        .aside-atractivos-sur{
+
+            .section-img-atractivos-sur{
+                
+                width: 1000px; 
+                border: 1px solid var(--clr-navbar);
+                @include tablet{
+
+                }
+            }
+            .section-img-atractivos-sur2{
+                width: 100%;
+                float: right;
+                @include tablet{
+                    width: 50%;
+                    flex-direction: column;
+                }
+            }
         }
     }
-        .section-tarjetas-sur{
-            padding: 60px;
-            display: flex;
-            gap: 30px;
-            .tarjeta-atractivos-sur{
-                overflow: hidden;
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
-                padding-inline:10px ;
-                font-style: italic;
     
-                color: black;
-                padding: 1rem;
-                border: 1px solid #ddd;
-                border-radius: 8px;
-                background-color: var(--clr-content2);
-                margin-right: 5rem;
-                text-align: center;
-                height: auto;
-                
-        }
-        
 }
+
+.article-atractivos-sur{
+    font-size: 1.1rem;
+    color: black;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-left: 2.5rem;
+    border: 1px solid var(--clr-navbar);
+    background-color: var(--clr-content2);
+    overflow: hidden;
+    margin-right: 5rem;         
+    
+}
+
+
 
 // ESTE ESTE ESTE ESTE
 .div-section-este{
@@ -262,13 +282,14 @@
     grid-template-columns: repeat(auto-fit, minmax(40%, 1fr)); 
     font-size: 1.1rem; 
     justify-content: center;
+
         .section-atractivos-este{
             font-size: 1.1rem; 
             color: #333; 
             padding: 1rem; 
             margin-bottom: 1rem; 
-            border: 1px solid #ddd;
             border-radius: 8px;
+            border: 1px solid var(--clr-navbar);
             background-color: var(--clr-content); 
         }
 
@@ -277,22 +298,30 @@
             color: #333;
             margin-bottom: 1rem;
             padding: 1rem;
-            border: 1px solid #ddd;
             border-radius: 8px;
+            border: 1px solid var(--clr-navbar);
             background-color: var(--clr-content);
-            overflow: hidden;     
-            margin-right: 5rem;
-
         }
         
         .div-aside-este {
             height: 100%; 
-          
+            @include tablet{
+                height: 50%;
+                display: flex;
+                flex-direction: column;
+                
+
+            }
             .section-img-atractivos-este {
-              float: left;
-              width: 50%;
-              margin-top: 2rem;
-              margin-right: 5rem;
+                float: left;
+                width: 80%;
+                margin-top: 2rem;
+                margin-right: 2rem;
+                margin-bottom: 2rem;
+
+                @include tablet{
+                    width: 450px;
+                }
           
               img {
                 width: 100%;
@@ -307,15 +336,15 @@
                 color: #333;
                 margin-bottom: 1rem;
                 padding: 1rem;
-                border: 1px solid #ddd;
                 border-radius: 8px;
+                border: 1px solid var(--clr-navbar);
                 background-color: var(--clr-content);
                 overflow: hidden;
-                margin-right: 5rem;
                 margin-top: 2rem;
                 text-align: center;
-
-                height: 100%;
+                @include tablet{
+                    font-size: 1.3rem;
+                }
                 }
         }
 
@@ -346,19 +375,29 @@
             max-width: 80%; 
             height: auto; 
             display: inline-block; 
+            @include tablet{
+                max-width: 350px;
+            }
             }
         }
     }
   
       .carousel-control-prev,
       .carousel-control-next {
-        width: 1.3rem;
+        width: 1rem;
         background-color: #494b4993; 
         color: #fff;
         border: none; 
         border-radius: 5rem;
         font-size: 1.5rem; 
         margin-top: -50px; 
+        @include tablet{
+            border-radius: 2rem;
+            font-size: 2.5rem; 
+            margin-top: 0px; 
+            margin-right: -20px;
+            margin-left: -20px;
+             }
         }
     }
 }
@@ -429,4 +468,33 @@
             }
 
     }
+} 
+.section-tarjetas{
+    padding: 60px;
+    display: flex;
+    gap: 30px;
+    @include tablet{
+        flex-direction: column;
+    }
+        .tarjeta-atractivos-oeste{
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding-inline:10px ;
+            font-style: italic;
+
+            color: black;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: var(--clr-content2);
+            margin-right: 5rem;
+            text-align: center;
+            height: auto;
+
+            .img-tarjeta{
+                max-width: auto; 
+            }
+        }
 }
