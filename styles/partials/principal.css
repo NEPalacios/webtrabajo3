@@ -391,7 +391,7 @@
   color: #333;
   margin-bottom: 1rem;
   padding: 1rem;
-  border: 1px solid #ddd;
+  border: 1px solid var(--clr-navbar);
   border-radius: 8px;
   background-color: var(--clr-content);
 }
@@ -431,7 +431,7 @@
   color: #333;
   margin-bottom: 1rem;
   padding: 1rem;
-  border: 1px solid #ddd;
+  border: 1px solid var(--clr-navbar);
   border-radius: 8px;
   background-color: #f9f9f9;
 }
@@ -443,6 +443,7 @@
 }
 @media screen and (max-width: 800px) {
   .section-tarjetas {
+    display: flex;
     flex-direction: column;
   }
 }
@@ -457,6 +458,7 @@
   padding: 1rem;
   border: 1px solid #ddd;
   border-radius: 8px;
+  border: 1px solid var(--clr-navbar);
   background-color: var(--clr-content2);
   margin-right: 5rem;
   text-align: center;
