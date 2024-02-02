@@ -1,5 +1,9 @@
 @mixin tablet {
+<<<<<<< HEAD
     @media screen and (max-width: 800px) {
+=======
+    @media screen and (max-width: 850px) {
+>>>>>>> fb272739380eacfac8d5383433e7bdb47b75fd62
         @content;
     }
 }

@@ -1,0 +1,1005 @@
+<<<<<<< HEAD:styles/partials/_main.scss
+@font-face {
+    font-family: 'Rubik';
+    src: url(../../fonts/RubikDoodleShadow-Regular.ttf);
+
+}
+@mixin centro-vertical(){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin marginyBorder(){
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+:root{
+    --clr-navbar: #3A6EA5;
+    --clr-content: #c0c0c086;
+    --clr-content2: #b4b1b1;
+    --clr-footer: #3A6EA5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    @include tablet{
+        font-size: 1.4rem;
+    }
+}
+
+// TITULO TITULO
+.titulo{
+    font-family: 'Rubik';
+    font-size: 4rem; 
+    text-align: center;
+    align-items: center;
+}
+
+
+// NAVBAR NAVBAR 
+.navbarPrincipal{
+    display: flex;
+    justify-content: center;
+    background-color: var(--clr-navbar);
+    font-size: 1.1rem; 
+    .navbar-nav {
+        display: flex;
+        align-items: center;
+
+        .nav-item {
+            margin-right: 1rem;  
+        }
+    }
+}
+
+// GRILLA DE IMÁGENES
+.sectionPrincipal {
+    text-align: center;
+    padding-block: 1vw; 
+
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(40%, 1fr)); 
+        gap: 2rem; 
+        @include tablet{
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .grid-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem; 
+        
+        
+        }
+        .description {
+            position: absolute;
+            bottom: 0;
+            left: 10rem; 
+            width: 60%;
+            background-color: var(--clr-navbar);
+            color: #fff;
+            padding: 1rem; 
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+    }
+}
+
+
+// ANIMACION INDEX 
+.grid-container {
+    display: grid;
+    place-items: center;
+    
+    .grid-img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease-in-out;
+      }
+      
+    .grid-img:hover {
+        transform: scale(1.1);
+      }
+    .grid-item:hover .description {
+        opacity: 1;
+    }
+}
+  
+//FOOTER FOOTER FOOTER
+.footer {
+    bottom: 0;
+    width: 100%;
+    font-size: 1rem; 
+    text-align: center;
+    color: white;
+    background-color: var(--clr-footer);
+    text-decoration: solid;
+  }
+
+//carousel 
+.section-carousel{
+    margin-top: 2.5rem;
+}
+
+#carouselExampleAutoplaying {
+    display: flex;
+    width: 1000px; 
+    margin: 0 auto;
+    @include tablet{
+        display: flex;
+        width: 500px; 
+        margin: 0 auto;
+    }
+}
+  
+#carouselExampleAutoplaying .carousel-inner img {
+    display: flex;
+    max-width: 1000px;
+    height: auto;
+    @include tablet{
+        display: flex;
+        width: 500px; 
+        margin: 0 auto;
+    }
+}
+
+
+// NORTE NORTE
+.div-section-norte{
+    @include centro-vertical;
+    padding: 3rem; 
+    padding-bottom: 0;
+    gap: 2rem; 
+    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr)); 
+    font-size: 1.1rem; 
+    justify-content: center;
+    
+    .section-clima, .section-conclusion{
+        font-size: 1.1rem; 
+        color: #333; 
+        margin-bottom: 1rem; 
+        padding: 1rem; 
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: var(--clr-content); 
+    }
+    .aside-atractivos {
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: black;
+        @include marginyBorder;
+        background-color: var(--clr-content2);
+        overflow: hidden;
+        margin-right: 5rem;
+    }
+    .section-atractivos{
+        font-size: 1.1rem;
+        color: #333;
+        @include marginyBorder;
+        background-color: var(--clr-content);
+        overflow: hidden;     
+
+            .section-img-atractivos {
+            float: right; 
+            width: 70%; 
+            margin-top: 2rem; 
+            margin-left: 5rem;
+            border-radius: 3rem;
+                @include tablet{
+                    display: flex;
+                    flex-direction: column;
+                    float:none;
+                    margin-bottom: 3rem;
+                }
+            } 
+    
+    } 
+}
+   
+// // SUR SUR SUR SUR
+.div-section-sur{
+   @include centro-vertical();
+    padding: 3rem; 
+    padding-bottom: 0;
+    gap: 2rem; 
+    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr)); 
+    font-size: 1.1rem; 
+    justify-content: center;
+  
+
+        .section-resumen-sur{
+            font-size: 1.1rem; 
+            color: #333; 
+            margin-bottom: 1rem; 
+            padding: 1rem; 
+            border-radius: 8px;
+            font-style: italic;
+            border: 1px solid var(--clr-navbar);
+            background-color: var(--clr-content);  
+        }
+
+    .section-atractivos-sur{
+        font-size: 1.1rem;
+        color: #333;
+        @include marginyBorder;
+        border: 1px solid var(--clr-navbar);
+        background-color: var(--clr-content); 
+        overflow: hidden;     
+        margin-right: 6rem;
+
+        .aside-atractivos-sur{
+
+            .section-img-atractivos-sur{
+                
+                width: 1000px; 
+                border: 1px solid var(--clr-navbar);
+                @include tablet{
+
+                }
+            }
+            .section-img-atractivos-sur2{
+                width: 100%;
+                float: right;
+                @include tablet{
+                    width: 50%;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+    
+}
+
+.article-atractivos-sur{
+    font-size: 1.1rem;
+    color: black;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-left: 2.5rem;
+    border: 1px solid var(--clr-navbar);
+    background-color: var(--clr-content2);
+    overflow: hidden;
+    margin-right: 5rem;         
+    
+}
+
+
+
+// ESTE ESTE ESTE ESTE
+.div-section-este{
+    @include centro-vertical();
+    padding: 3rem; 
+    padding-bottom: 0;
+    gap: 2rem; 
+    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr)); 
+    font-size: 1.1rem; 
+    justify-content: center;
+
+        .section-atractivos-este{
+            font-size: 1.1rem; 
+            color: #333; 
+            padding: 1rem; 
+            margin-bottom: 1rem; 
+            border-radius: 8px;
+            border: 1px solid var(--clr-navbar);
+            background-color: var(--clr-content); 
+        }
+
+        .article-atractivos-este{
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--clr-navbar);
+            background-color: var(--clr-content);
+        }
+        
+        .div-aside-este {
+            height: 100%; 
+            @include tablet{
+                height: 50%;
+                display: flex;
+                flex-direction: column;
+                
+
+            }
+            .section-img-atractivos-este {
+                float: left;
+                width: 80%;
+                margin-top: 2rem;
+                margin-right: 2rem;
+                margin-bottom: 2rem;
+
+                @include tablet{
+                    width: 450px;
+                }
+          
+              img {
+                width: 100%;
+                height: auto; 
+                object-fit: cover; 
+                display: block; 
+              }
+            }
+          
+            .aside-atractivos-este {
+                font-size: 1.1rem;
+                color: #333;
+                margin-bottom: 1rem;
+                padding: 1rem;
+                border-radius: 8px;
+                border: 1px solid var(--clr-navbar);
+                background-color: var(--clr-content);
+                overflow: hidden;
+                margin-top: 2rem;
+                text-align: center;
+                @include tablet{
+                    font-size: 1.3rem;
+                }
+                }
+        }
+
+    .section-conclusion-este{
+        font-size: 1.1rem; 
+        color: black; 
+        margin-bottom: 1rem; 
+        padding: 1rem; 
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: var(--clr-content2);  
+        margin-bottom: 5rem;
+        text-align: center;
+    }
+}
+
+.div-carousel-este {
+    #carouselExample {
+      width: 50%;
+      margin-top: 5rem;
+      margin: 0 auto;
+  
+      .carousel-inner {
+        .carousel-item {
+          text-align: center;
+  
+            img {
+            max-width: 80%; 
+            height: auto; 
+            display: inline-block; 
+            @include tablet{
+                max-width: 350px;
+            }
+            }
+        }
+    }
+  
+      .carousel-control-prev,
+      .carousel-control-next {
+        width: 1rem;
+        background-color: #494b4993; 
+        color: #fff;
+        border: none; 
+        border-radius: 5rem;
+        font-size: 1.5rem; 
+        margin-top: -50px; 
+        @include tablet{
+            border-radius: 2rem;
+            font-size: 2.5rem; 
+            margin-top: 0px; 
+            margin-right: -20px;
+            margin-left: -20px;
+             }
+        }
+    }
+}
+
+
+// OESTE OESTE OESTE OESTE
+.div-section-oeste{
+    @include centro-vertical();
+    padding: 3rem; 
+    padding-bottom: 0;
+    gap: 2rem; 
+    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr)); 
+    font-size: 1.1rem; 
+    justify-content: center;
+
+    .section-atractivos-oeste{
+        font-size: 1.1rem; 
+        color: #333; 
+        margin-bottom: 1rem; 
+        padding: 1rem; 
+        border: 1px solid var(--clr-navbar);
+        border-radius: 8px;
+        background-color: var(--clr-content); 
+    }
+    .table-oeste{
+        margin: 2rem 3rem 4rem 4rem;
+        border: black;
+        font-style:italic;
+        font-weight: 500;        
+        background-color: var(--clr-content2);
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            margin-left: 0;
+
+        }
+        
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: var(--clr-navbar);
+        }
+    }
+
+    .div-aside-oeste{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 3rem;
+        padding-bottom: 0;
+        gap: 2rem;
+        font-size: 1.1rem;
+        justify-content: center;
+        
+            .aside-atractivos-oeste{
+                font-size: 1.1rem; 
+                color: #333; 
+                margin-bottom: 1rem; 
+                padding: 1rem; 
+                border: 1px solid var(--clr-navbar);
+                border-radius: 8px;
+                background-color: #f9f9f9; 
+            }
+
+    }
+} 
+.section-tarjetas{
+    padding: 60px;
+    display: flex;
+    gap: 30px;
+    
+    @include tablet{
+        display: flex;
+        flex-direction: column;
+    }
+        .tarjeta-atractivos-oeste{
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding-inline:10px ;
+            font-style: italic;
+
+            color: black;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            border: 1px solid var(--clr-navbar);
+            background-color: var(--clr-content2);
+            margin-right: 5rem;
+            text-align: center;
+            height: auto;
+
+            .img-tarjeta{
+                max-width: auto; 
+            }
+        }
+=======
+@font-face {
+    font-family: 'Rubik';
+    src: url(../../fonts/RubikDoodleShadow-Regular.ttf);
+
+}
+@mixin centro-vertical(){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin marginyBorder(){
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+:root{
+    --clr-navbar: #3A6EA5;
+    --clr-content: #c0c0c086;
+    --clr-content2: #b4b1b1;
+    --clr-footer: #3A6EA5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    @include tablet{
+        font-size: 1.4rem;
+    }
+}
+
+// TITULO TITULO
+.titulo{
+    font-family: 'Rubik';
+    font-size: 4rem; 
+    text-align: center;
+    align-items: center;
+}
+
+
+// NAVBAR NAVBAR 
+.navbarPrincipal{
+    display: flex;
+    justify-content: center;
+    background-color: var(--clr-navbar);
+    font-size: 1.1rem; 
+    .navbar-nav {
+        display: flex;
+        align-items: center;
+
+        .nav-item {
+            margin-right: 1rem;  
+        }
+    }
+}
+
+// GRILLA DE IMÁGENES
+.sectionPrincipal {
+    text-align: center;
+    padding-block: 1vw; 
+
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(40%, 1fr)); 
+        gap: 2rem; 
+        @include tablet{
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .grid-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem; 
+        
+        
+        }
+        .description {
+            position: absolute;
+            bottom: 0;
+            left: 10rem; 
+            width: 60%;
+            background-color: var(--clr-navbar);
+            color: #fff;
+            padding: 1rem; 
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+    }
+}
+
+
+// ANIMACION INDEX 
+.grid-container {
+    display: grid;
+    place-items: center;
+    
+    .grid-img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease-in-out;
+      }
+      
+    .grid-img:hover {
+        transform: scale(1.1);
+      }
+    .grid-item:hover .description {
+        opacity: 1;
+    }
+}
+  
+//FOOTER FOOTER FOOTER
+.footer {
+    bottom: 0;
+    width: 100%;
+    font-size: 1rem; 
+    text-align: center;
+    color: white;
+    background-color: var(--clr-footer);
+    text-decoration: solid;
+  }
+
+//carousel 
+.section-carousel{
+    margin-top: 2.5rem;
+}
+
+#carouselExampleAutoplaying {
+    display: flex;
+    width: 1000px; 
+    margin: 0 auto;
+    @include tablet{
+        display: flex;
+        width: 500px; 
+        margin: 0 auto;
+    }
+}
+  
+#carouselExampleAutoplaying .carousel-inner img {
+    display: flex;
+    max-width: 1000px;
+    height: auto;
+    @include tablet{
+        display: flex;
+        width: 500px; 
+        margin: 0 auto;
+    }
+}
+
+
+// NORTE NORTE
+.div-section-norte{
+    @include centro-vertical;
+    padding: 3rem; 
+    padding-bottom: 0;
+    gap: 2rem; 
+    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr)); 
+    font-size: 1.1rem; 
+    justify-content: center;
+    
+    .section-clima, .section-conclusion{
+        font-size: 1.1rem; 
+        color: #333; 
+        margin-bottom: 1rem; 
+        padding: 1rem; 
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: var(--clr-content); 
+    }
+    .aside-atractivos {
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: black;
+        @include marginyBorder;
+        background-color: var(--clr-content2);
+        overflow: hidden;
+        margin-right: 5rem;
+    }
+    .section-atractivos{
+        font-size: 1.1rem;
+        color: #333;
+        @include marginyBorder;
+        background-color: var(--clr-content);
+        overflow: hidden;     
+
+            .section-img-atractivos {
+            float: right; 
+            width: 70%; 
+            margin-top: 2rem; 
+            margin-left: 5rem;
+            border-radius: 3rem;
+                @include tablet{
+                    display: flex;
+                    flex-direction: column;
+                    float:none;
+                    margin-bottom: 3rem;
+                }
+            } 
+    
+    } 
+}
+   
+// // SUR SUR SUR SUR
+.div-section-sur{
+   @include centro-vertical();
+    padding: 3rem; 
+    padding-bottom: 0;
+    gap: 2rem; 
+    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr)); 
+    font-size: 1.1rem; 
+    justify-content: center;
+  
+
+        .section-resumen-sur{
+            font-size: 1.1rem; 
+            color: #333; 
+            margin-bottom: 1rem; 
+            padding: 1rem; 
+            border-radius: 8px;
+            font-style: italic;
+            border: 1px solid var(--clr-navbar);
+            background-color: var(--clr-content);  
+        }
+
+    .section-atractivos-sur{
+        font-size: 1.1rem;
+        color: #333;
+        @include marginyBorder;
+        border: 1px solid var(--clr-navbar);
+        background-color: var(--clr-content); 
+        overflow: hidden;     
+        margin-right: 6rem;
+
+        .aside-atractivos-sur{
+
+            .section-img-atractivos-sur{
+                
+                width: 1000px; 
+                border: 1px solid var(--clr-navbar);
+                @include tablet{
+
+                }
+            }
+            .section-img-atractivos-sur2{
+                width: 100%;
+                float: right;
+                @include tablet{
+                    width: 50%;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+    
+}
+
+.article-atractivos-sur{
+    font-size: 1.1rem;
+    color: black;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-left: 2.5rem;
+    border: 1px solid var(--clr-navbar);
+    background-color: var(--clr-content2);
+    overflow: hidden;
+    margin-right: 5rem;         
+    
+}
+
+
+
+// ESTE ESTE ESTE ESTE
+.div-section-este{
+    @include centro-vertical();
+    padding: 3rem; 
+    padding-bottom: 0;
+    gap: 2rem; 
+    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr)); 
+    font-size: 1.1rem; 
+    justify-content: center;
+
+        .section-atractivos-este{
+            font-size: 1.1rem; 
+            color: #333; 
+            padding: 1rem; 
+            margin-bottom: 1rem; 
+            border-radius: 8px;
+            border: 1px solid var(--clr-navbar);
+            background-color: var(--clr-content); 
+        }
+
+        .article-atractivos-este{
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--clr-navbar);
+            background-color: var(--clr-content);
+        }
+        
+        .div-aside-este {
+            height: 100%; 
+            @include tablet{
+                height: 50%;
+                display: flex;
+                flex-direction: column;
+                
+
+            }
+            .section-img-atractivos-este {
+                float: left;
+                width: 80%;
+                margin-top: 2rem;
+                margin-right: 2rem;
+                margin-bottom: 2rem;
+
+                @include tablet{
+                    width: 450px;
+                }
+          
+              img {
+                width: 100%;
+                height: auto; 
+                object-fit: cover; 
+                display: block; 
+              }
+            }
+          
+            .aside-atractivos-este {
+                font-size: 1.1rem;
+                color: #333;
+                margin-bottom: 1rem;
+                padding: 1rem;
+                border-radius: 8px;
+                border: 1px solid var(--clr-navbar);
+                background-color: var(--clr-content);
+                overflow: hidden;
+                margin-top: 2rem;
+                text-align: center;
+                @include tablet{
+                    font-size: 1.3rem;
+                }
+                }
+        }
+
+    .section-conclusion-este{
+        font-size: 1.1rem; 
+        color: black; 
+        margin-bottom: 1rem; 
+        padding: 1rem; 
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: var(--clr-content2);  
+        margin-bottom: 5rem;
+        text-align: center;
+    }
+}
+
+.div-carousel-este {
+    #carouselExample {
+      width: 50%;
+      margin-top: 5rem;
+      margin: 0 auto;
+  
+      .carousel-inner {
+        .carousel-item {
+          text-align: center;
+  
+            img {
+            max-width: 80%; 
+            height: auto; 
+            display: inline-block; 
+            @include tablet{
+                max-width: 350px;
+            }
+            }
+        }
+    }
+  
+      .carousel-control-prev,
+      .carousel-control-next {
+        width: 1rem;
+        background-color: #494b4993; 
+        color: #fff;
+        border: none; 
+        border-radius: 5rem;
+        font-size: 1.5rem; 
+        margin-top: -50px; 
+        @include tablet{
+            border-radius: 2rem;
+            font-size: 2.5rem; 
+            margin-top: 0px; 
+            margin-right: -20px;
+            margin-left: -20px;
+             }
+        }
+    }
+}
+
+
+// OESTE OESTE OESTE OESTE
+.div-section-oeste{
+    @include centro-vertical();
+    padding: 3rem; 
+    padding-bottom: 0;
+    gap: 2rem; 
+    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr)); 
+    font-size: 1.1rem; 
+    justify-content: center;
+
+    .section-atractivos-oeste{
+        font-size: 1.1rem; 
+        color: #333; 
+        margin-bottom: 1rem; 
+        padding: 1rem; 
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: var(--clr-content); 
+    }
+    .table-oeste{
+        margin: 2rem 3rem 4rem 4rem;
+        border: black;
+        font-style:italic;
+        font-weight: 500;        
+        background-color: var(--clr-content2);
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            margin-left: 0;
+
+        }
+        
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: var(--clr-navbar);
+        }
+    }
+
+    .div-aside-oeste{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 3rem;
+        padding-bottom: 0;
+        gap: 2rem;
+        font-size: 1.1rem;
+        justify-content: center;
+        
+            .aside-atractivos-oeste{
+                font-size: 1.1rem; 
+                color: #333; 
+                margin-bottom: 1rem; 
+                padding: 1rem; 
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                background-color: #f9f9f9; 
+            }
+
+    }
+} 
+.section-tarjetas{
+    padding: 60px;
+    display: flex;
+    gap: 30px;
+    @include tablet{
+        flex-direction: column;
+    }
+        .tarjeta-atractivos-oeste{
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding-inline:10px ;
+            font-style: italic;
+
+            color: black;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: var(--clr-content2);
+            margin-right: 5rem;
+            text-align: center;
+            height: auto;
+
+            .img-tarjeta{
+                max-width: auto; 
+            }
+        }
+>>>>>>> fb272739380eacfac8d5383433e7bdb47b75fd62:webtrabajo2/styles/partials/_main.scss
+}

@@ -1,5 +1,20 @@
+<<<<<<< HEAD
 @import "media-queries";
 @import "main.scss";
+=======
+
+@import "media-queries";
+@import "variablesMixins.scss";
+
+@import "navbar.scss";
+@import "indexReset.scss";
+@import "norte.scss";
+@import "sur.scss";
+@import "este.scss";
+@import "oeste.scss";
+
+
+>>>>>>> fb272739380eacfac8d5383433e7bdb47b75fd62
 
 
 h2{

@@ -9,7 +9,6 @@
   --clr-footer: #3A6EA5;
 }
 
-<<<<<<< HEAD
 * {
   margin: 0;
   padding: 0;
@@ -28,8 +27,6 @@
   align-items: center;
 }
 
-=======
->>>>>>> fb272739380eacfac8d5383433e7bdb47b75fd62
 .navbarPrincipal {
   display: flex;
   justify-content: center;
@@ -44,19 +41,6 @@
   margin-right: 1rem;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.titulo {
-  font-family: "Rubik";
-  font-size: 4rem;
-  text-align: center;
-  align-items: center;
-}
-
 .sectionPrincipal {
   text-align: center;
   padding-block: 1vw;
@@ -65,11 +49,7 @@
   grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
   gap: 2rem;
 }
-<<<<<<< HEAD
 @media screen and (max-width: 800px) {
-=======
-@media screen and (max-width: 850px) {
->>>>>>> fb272739380eacfac8d5383433e7bdb47b75fd62
   .sectionPrincipal .grid-container {
     display: flex;
     flex-direction: column;
@@ -121,12 +101,12 @@
 }
 
 .section-carousel {
-  margin: 2rem 2rem 2rem 2rem;
+  margin-top: 2.5rem;
 }
 
 #carouselExampleAutoplaying {
   display: flex;
-  width: 800px;
+  width: 1000px;
   margin: 0 auto;
 }
 @media screen and (max-width: 800px) {
@@ -139,7 +119,7 @@
 
 #carouselExampleAutoplaying .carousel-inner img {
   display: flex;
-  max-width: 800px;
+  max-width: 1000px;
   height: auto;
 }
 @media screen and (max-width: 800px) {
@@ -162,25 +142,16 @@
   justify-content: center;
 }
 .div-section-norte .section-clima, .div-section-norte .section-conclusion {
+  font-size: 1.1rem;
   color: #333;
   margin-bottom: 1rem;
   padding: 1rem;
+  border: 1px solid #ddd;
   border-radius: 8px;
-  border: 1px solid var(--clr-navbar);
   background-color: var(--clr-content);
 }
-@media screen and (max-width: 850px) {
-  .div-section-norte .section-clima, .div-section-norte .section-conclusion {
-    font-size: 1.3rem;
-  }
-}
-@media screen and (max-width: 400px) {
-  .div-section-norte .section-clima, .div-section-norte .section-conclusion {
-    width: 100vw;
-    font-size: 3rem;
-  }
-}
 .div-section-norte .aside-atractivos {
+  font-size: 1.1rem;
   font-weight: 400;
   color: black;
   margin-bottom: 1rem;
@@ -188,15 +159,8 @@
   border: 1px solid #ddd;
   border-radius: 8px;
   background-color: var(--clr-content2);
-  border: 1px solid var(--clr-navbar);
   overflow: hidden;
   margin-right: 5rem;
-}
-@media screen and (max-width: 850px) {
-  .div-section-norte .aside-atractivos {
-    display: flex;
-    flex-direction: column;
-  }
 }
 .div-section-norte .section-atractivos {
   font-size: 1.1rem;
@@ -205,12 +169,10 @@
   padding: 1rem;
   border: 1px solid #ddd;
   border-radius: 8px;
-  border: 1px solid var(--clr-navbar);
   background-color: var(--clr-content);
   overflow: hidden;
 }
 .div-section-norte .section-atractivos .section-img-atractivos {
-  border: 1px solid var(--clr-navbar);
   float: right;
   width: 70%;
   margin-top: 2rem;
@@ -294,17 +256,9 @@
   padding: 3rem;
   padding-bottom: 0;
   gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
   font-size: 1.1rem;
   justify-content: center;
-}
-@media screen and (max-width: 850px) {
-  .div-section-este {
-    max-width: 100vw;
-    font-size: 1.7rem;
-  }
-  .div-section-este h2 {
-    font-size: 2.2rem;
-  }
 }
 .div-section-este .section-atractivos-este {
   font-size: 1.1rem;
@@ -314,60 +268,19 @@
   border-radius: 8px;
   border: 1px solid var(--clr-navbar);
   background-color: var(--clr-content);
-  max-width: 100vw;
-  margin-left: auto;
-  margin-right: auto;
-}
-@media screen and (max-width: 850px) {
-  .div-section-este .section-atractivos-este {
-    max-width: 100vw;
-    font-size: 1.4rem;
-  }
-  .div-section-este .section-atractivos-este h2 {
-    font-size: 2.2rem;
-  }
 }
 .div-section-este .article-atractivos-este {
   font-size: 1.1rem;
   color: #333;
-  padding: 1rem;
-<<<<<<< HEAD
-  border-radius: 8px;
-  border: 1px solid var(--clr-navbar);
-  background-color: var(--clr-content);
-=======
   margin-bottom: 1rem;
+  padding: 1rem;
   border-radius: 8px;
   border: 1px solid var(--clr-navbar);
   background-color: var(--clr-content);
-  max-width: 100vw;
-  margin-left: auto;
-  margin-right: auto;
 }
-@media screen and (max-width: 850px) {
-  .div-section-este .article-atractivos-este {
-    max-width: 100vw;
-    font-size: 1.4rem;
-  }
-  .div-section-este .article-atractivos-este h2 {
-    font-size: 2.2rem;
-  }
+.div-section-este .div-aside-este {
+  height: 100%;
 }
-.div-section-este .section-img-atractivos-este {
-  display: flex;
-  width: 700px;
-  margin-right: 5rem;
-  margin-bottom: 2rem;
-  border: 1px solid var(--clr-navbar);
-  justify-content: center;
->>>>>>> fb272739380eacfac8d5383433e7bdb47b75fd62
-}
-@media screen and (max-width: 850px) {
-  .div-section-este .section-img-atractivos-este {
-    width: 70%;
-  }
-}
-<<<<<<< HEAD
 @media screen and (max-width: 800px) {
   .div-section-este .div-aside-este {
     height: 50%;
@@ -395,13 +308,10 @@
   display: block;
 }
 .div-section-este .div-aside-este .aside-atractivos-este {
-=======
-.div-section-este .aside-atractivos-este {
->>>>>>> fb272739380eacfac8d5383433e7bdb47b75fd62
   font-size: 1.1rem;
   color: #333;
+  margin-bottom: 1rem;
   padding: 1rem;
-<<<<<<< HEAD
   border-radius: 8px;
   border: 1px solid var(--clr-navbar);
   background-color: var(--clr-content);
@@ -413,39 +323,24 @@
   .div-section-este .div-aside-este .aside-atractivos-este {
     font-size: 1.3rem;
   }
-=======
-  margin-bottom: 1rem;
-  border-radius: 8px;
-  border: 1px solid var(--clr-navbar);
-  background-color: var(--clr-content);
-  max-width: 100vw;
-  margin-left: auto;
-  margin-right: auto;
->>>>>>> fb272739380eacfac8d5383433e7bdb47b75fd62
 }
-@media screen and (max-width: 850px) {
-  .div-section-este .aside-atractivos-este {
-    max-width: 100vw;
-    font-size: 1.4rem;
-  }
-  .div-section-este .aside-atractivos-este h2 {
-    font-size: 2.2rem;
-  }
+.div-section-este .section-conclusion-este {
+  font-size: 1.1rem;
+  color: black;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: var(--clr-content2);
+  margin-bottom: 5rem;
+  text-align: center;
 }
 
-.section-conclusion-este {
-  font-size: 1.1rem;
-  color: #333;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 8px;
-  border: 1px solid var(--clr-navbar);
-  background-color: var(--clr-content);
-  max-width: 100vw;
-  margin-left: 2.5rem;
-  margin-right: 2.5rem;
+.div-carousel-este #carouselExample {
+  width: 50%;
+  margin-top: 5rem;
+  margin: 0 auto;
 }
-<<<<<<< HEAD
 .div-carousel-este #carouselExample .carousel-inner .carousel-item {
   text-align: center;
 }
@@ -468,16 +363,6 @@
   border-radius: 5rem;
   font-size: 1.5rem;
   margin-top: -50px;
-=======
-@media screen and (max-width: 850px) {
-  .section-conclusion-este {
-    max-width: 100vw;
-    font-size: 1.4rem;
-  }
-  .section-conclusion-este h2 {
-    font-size: 2.2rem;
-  }
->>>>>>> fb272739380eacfac8d5383433e7bdb47b75fd62
 }
 @media screen and (max-width: 800px) {
   .div-carousel-este #carouselExample .carousel-control-prev,
@@ -506,7 +391,7 @@
   color: #333;
   margin-bottom: 1rem;
   padding: 1rem;
-  border: 1px solid var(--clr-navbar);
+  border: 1px solid #ddd;
   border-radius: 8px;
   background-color: var(--clr-content);
 }
@@ -546,7 +431,7 @@
   color: #333;
   margin-bottom: 1rem;
   padding: 1rem;
-  border: 1px solid var(--clr-navbar);
+  border: 1px solid #ddd;
   border-radius: 8px;
   background-color: #f9f9f9;
 }
@@ -558,7 +443,6 @@
 }
 @media screen and (max-width: 800px) {
   .section-tarjetas {
-    display: flex;
     flex-direction: column;
   }
 }
@@ -573,7 +457,6 @@
   padding: 1rem;
   border: 1px solid #ddd;
   border-radius: 8px;
-  border: 1px solid var(--clr-navbar);
   background-color: var(--clr-content2);
   margin-right: 5rem;
   text-align: center;
